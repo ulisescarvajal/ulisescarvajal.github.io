@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Ulises - Welcome</title>
+    <link href="./Style/main.css" rel="stylesheet" media="screen">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="./FireBase/firebase-app.js"></script>
+    <script src="./FireBase/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyACECcIRSYpD_mL9CQMOR3fQs10U97pO7o",
+            authDomain: "ulises-8ec86.firebaseapp.com",
+            databaseURL: "https://ulises-8ec86-default-rtdb.firebaseio.com",
+            projectId: "ulises-8ec86",
+            storageBucket: "ulises-8ec86.appspot.com",
+            messagingSenderId: "604657877601",
+            appId: "1:604657877601:web:b9fb788bacca374755e020",
+            measurementId: "G-SK6PVVPSZK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        db.collection('products').get().then((snapshot) => {
+            snapshot.forEach((doc) => {
+                alert(doc.id + ' / ' + JSON.stringify(doc.data()));
+            });
+        }).catch(err => {
+            alert(JSON.stringify(err));
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        Hello world1
+    </div>
+</body>
+
+</html>

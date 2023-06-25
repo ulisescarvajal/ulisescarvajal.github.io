@@ -225,6 +225,11 @@ header div nav .selected
     border-top-color: #C425B2;
     border-bottom-color: #C425B2;
 }
+.menu.grey
+{
+    border-top-color: grey;
+    border-bottom-color: grey;
+}
 
 .menu.blue:hover
 {
@@ -249,6 +254,11 @@ header div nav .selected
 .menu.purple:hover
 {
     background-color: #C425B2;
+    transition: background 0s;
+}
+.menu.grey:hover
+{
+    background-color: grey;
     transition: background 0s;
 }
 
@@ -1343,6 +1353,21 @@ footer div.small-screen
     }
 
     /* ============================================================= */
+    /* HEADER: Menu
+    /* ============================================================= */
+
+    header div nav
+    {
+        height: 32px;
+    }
+
+    header div nav a
+    {
+        font-size: 14px;
+        padding: 10px 25px 10px 25px;
+    }
+
+    /* ============================================================= */
     /* CLASS: golden-ratio
     /* ============================================================= */
 
@@ -1444,7 +1469,7 @@ footer div.small-screen
 
     header div nav a
     {
-        font-size: 17px;
+        font-size: 14px;
         padding: 10px 25px 10px 25px;
     }
 
@@ -1654,7 +1679,7 @@ footer div.small-screen
 
     header div nav a
     {
-        font-size: 18px;
+        font-size: 15px;
         padding: 9px 13px 9px 13px;
     }
 
@@ -2153,7 +2178,7 @@ footer div.small-screen
     
     header div nav
     {
-        height: 256px;
+        height: 315px;
         padding: 11px 0 0 0;
         width: 100%;
     }
